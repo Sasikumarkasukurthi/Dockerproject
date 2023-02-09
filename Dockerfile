@@ -1,5 +1,5 @@
-From nginx:latest
-label maintainer "sasikumar K"
+FROM ubuntu:latest
+MAINTAINER "sasikumar K"
 RUN apt-get install apache2 -y  && apt-get update
-Copy ./ /usr/share/nginx/html/
-expose 80
+COPY ./ /var/www/html
+EXPOSE 80
